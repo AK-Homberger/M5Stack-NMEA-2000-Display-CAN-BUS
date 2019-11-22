@@ -1,5 +1,6 @@
 # M5Stack-NMEA-2000-Display-CAN-BUS
-This repository shows how to use the M5Stack as NMEA 2000 Display and WiFi Gateway.
+This repository shows how to use the M5Stack as NMEA 2000 Display and WiFi Gateway. 
+The M5Stack is receiving the data dirctly from the CAN bus.
 
 The M5 Stack has a limited number of GPIO pins available. But pins 2 (TX) and 5 (RX) are working.
 
