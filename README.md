@@ -2,7 +2,7 @@
 This repository shows how to use the M5Stack as NMEA 2000 Display and WiFi Gateway. 
 The M5Stack is receiving the data directly from the CAN bus.
 
-The M5 Stack has a limited number of GPIO pins available. But pins 2 (TX) and 5 (RX) are working.
+The M5 Stack has a limited number of GPIO pins available. But pins 2 (CAN TX) and 5 (CAN RX) are working.
 
 The M5Stack can also work as WiFi Gateway to send NMEA 0183 messsages (TCP port 2222) via WiFi.
 Just set ENABLE_WIFI to "1" to enable. Change SSID/password accordingly.
