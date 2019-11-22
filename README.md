@@ -10,3 +10,7 @@ The only external Hardware is the CAN bus transceiver (Waveshare SN65HVD230).
 It is connected to 3,3 V, GND, CAN TX (GPIO2) CAN RX (GPIO 5).
 
 With the left two buttrons you can flip through the pages (5 pages currently) with differnt NMEA 2000 data. The right button is changing the backlight of the LCD.
+
+![Display1](https://github.com/AK-Homberger/M5Stack-NMEA-2000-Display-CAN-BUS/blob/master/IMG_1173.JPG)
+
+![Display2](https://github.com/AK-Homberger/M5Stack-NMEA-2000-Display-CAN-BUS/blob/master/IMG_1174.JPG)
