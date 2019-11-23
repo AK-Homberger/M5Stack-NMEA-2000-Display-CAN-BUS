@@ -2,7 +2,7 @@
 This repository shows how to use the M5Stack as NMEA 2000 Display and WiFi Gateway. 
 The M5Stack is receiving the data directly from the CAN bus.
 
-The project requires the NMEA2000 and NME0183 libraries from Timo Lappalainen: https://github.com/ttlappalainen
+The project requires the NMEA2000 and NMEA0183 libraries from Timo Lappalainen: https://github.com/ttlappalainen
 For the M5Stack the Board Software has to be installed: https://docs.m5stack.com/#/en/arduino/arduino_home_page
 
 The M5 Stack has a limited number of GPIO pins available. But pins 2 (CAN TX) and 5 (CAN RX) are working.
