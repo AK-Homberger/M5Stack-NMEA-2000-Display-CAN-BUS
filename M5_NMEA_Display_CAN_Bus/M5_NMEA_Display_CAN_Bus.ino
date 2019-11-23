@@ -12,7 +12,6 @@
 #define ESP32_CAN_TX_PIN GPIO_NUM_2  // Set CAN TX port to 2 for M5 Stack
 #define ESP32_CAN_RX_PIN GPIO_NUM_5  // Set CAN RX port to 5 for M5 Stack
 
-#include <Arduino.h>
 #include <M5Stack.h>
 #include <Time.h>
 #include <sys/time.h>
