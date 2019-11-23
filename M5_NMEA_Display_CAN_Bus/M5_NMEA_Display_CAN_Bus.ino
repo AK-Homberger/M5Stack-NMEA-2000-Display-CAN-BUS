@@ -72,7 +72,7 @@ void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg);
 
 double t = 0;  // Time
 int page = 0;  // Initial page to show
-int pages = 5; // Number of pages -1
+int pages = 4; // Number of pages -1
 int LCD_Brightness = 250;
 
 long MyTime = 0;  // System Time from NMEA2000
