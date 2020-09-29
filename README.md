@@ -1,4 +1,4 @@
-# M5Stack-NMEA-2000-Display-CAN-BUS
+# M5Stack NMEA2000 Display for CAN-BUS
 This repository shows how to use the M5Stack as NMEA 2000 Display and WiFi Gateway. 
 The M5Stack is receiving the data directly from the CAN bus.
 
