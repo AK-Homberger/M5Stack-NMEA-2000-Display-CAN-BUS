@@ -3,22 +3,23 @@
   Reads Data from CAN bus and displays is on the M5Stack module
   Converts NMEA2000 to NMEA0183 and send it to TCP clients via WiFi (port 2222)
 
-  Version 0.1 / 23.11.2019
+  Version 0.2 / 01.03.2021
 */
 
 #define ENABLE_WIFI 0  // Set to 1 to enable M5Stack acts also as NMEA0183 WiFi Gateway. Set to 0 to disable.
 #define ENABLE_DEBUG_LOG 0 // Debug log, set to 1 to enable
 
-#define ESP32_CAN_TX_PIN GPIO_NUM_2  // Set CAN TX port to 2 for M5 Stack
-#define ESP32_CAN_RX_PIN GPIO_NUM_5  // Set CAN RX port to 5 for M5 Stack
+#define ESP32_CAN_TX_PIN GPIO_NUM_17 // Set CAN TX port to 17 for M5 Stack
+#define ESP32_CAN_RX_PIN GPIO_NUM_16  // Set CAN RX port to 16 for M5 Stack
 
-#include <M5Stack.h>
+#include <Arduino.h>
 #include <Time.h>
 #include <sys/time.h>
 #include <NMEA2000_CAN.h>  // This will automatically choose right CAN library and create suitable NMEA2000 object
 #include <Seasmart.h>
 #include <N2kMessages.h>
 #include <WiFi.h>
+#include <M5Stack.h>
 
 #include "N2kDataToNMEA0183.h"
 #include "List.h"
