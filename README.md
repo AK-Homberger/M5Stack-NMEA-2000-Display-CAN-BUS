@@ -4,7 +4,7 @@ The M5Stack is receiving the data directly from the CAN bus.
 
 The project requires the NMEA2000, NMEA2000_esp32 and NMEA0183 libraries from Timo Lappalainen: https://github.com/ttlappalainen
 
-For the M5Stack the Board Software and library have to be installed: https://docs.m5stack.com/#/en/arduino/arduino_home_page
+For the M5Stack the Board Software and library have to be installed: https://docs.m5stack.com/#/en/arduino/arduino_development
 
 The M5 Stack has only a limited number of GPIO pins available. The initial version used GPIO 2 (CAN TX) and GPIO 5 (CAN RX). That led to problems with the NMEA2000 bus due to signals on both lines during boot and flash time.
 
