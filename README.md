@@ -23,5 +23,6 @@ With the left two buttrons you can flip through the pages (5 pages currently) wi
 ![Display2](https://github.com/AK-Homberger/M5Stack-NMEA-2000-Display-CAN-BUS/blob/master/IMG_1174.JPG)
 
 ## Updates:
+- 02.03.2021 - Version 0.3: Added changed source address check.
 - 01.03.2021 - Version 0.2: Changed CAN bus GPIOs.
 - 23:11.2019 - Version 0.1: Initial version.
