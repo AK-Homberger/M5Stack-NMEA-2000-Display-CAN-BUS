@@ -3,7 +3,7 @@
   Reads Data from CAN bus and displays is on the M5Stack module
   Converts NMEA2000 to NMEA0183 and send it to TCP clients via WiFi (port 2222)
 
-  Version 0.2 / 01.03.2021
+  Version 0.3 / 02.03.2021
 */
 
 #define ENABLE_WIFI 0  // Set to 1 to enable M5Stack acts also as NMEA0183 WiFi Gateway. Set to 0 to disable.
@@ -20,11 +20,14 @@
 #include <N2kMessages.h>
 #include <WiFi.h>
 #include <M5Stack.h>
+#include <Preferences.h>
 
 #include "N2kDataToNMEA0183.h"
 #include "List.h"
 #include "BoatData.h"
 
+int NodeAddress;            // To store last Node Address
+Preferences preferences;    // Nonvolatile storage on ESP32 - To store LastDeviceAddress
 
 tBoatData BoatData;  // Struct to store Boat Data (from BoatData.h)
 
@@ -246,7 +249,8 @@ void set_system_time(void) {
 
 void loop() {
   M5.update();
-
+  CheckSourceAddressChange();
+  
   if (millis() > t + 1000) {
     t = millis();
 
@@ -469,4 +473,20 @@ void Display_Main (void)
   M5.Lcd.print("NMEA Display");
   M5.Lcd.setCursor(210, 7);
   M5.Lcd.print("Batt");
+}
+
+
+//*****************************************************************************
+// Function to check if SourceAddress has changed (due to address conflict on bus)
+
+void CheckSourceAddressChange() {
+  int SourceAddress = NMEA2000.GetN2kSource();
+
+  if (SourceAddress != NodeAddress) { // Save potentially changed Source Address to NVS memory
+    NodeAddress = SourceAddress;      // Set new Node Address (to save only once)
+    preferences.begin("nvs", false);
+    preferences.putInt("LastNodeAddress", SourceAddress);
+    preferences.end();
+    Serial.printf("Address Change: New Address=%d\n", SourceAddress);
+  }
 }
