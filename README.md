@@ -8,7 +8,7 @@ For the M5Stack the board software and library have to be installed: https://doc
 
 The M5Stack has only a limited number of GPIO pins available. The initial version used GPIO 2 (CAN TX) and GPIO 5 (CAN RX). That led to problems with the NMEA2000 bus due to signals on both lines during boot and flash time.
 
-The new version (since 02.) is using GPIO 17 (TX) and GPIO 16 (RX) to avoid the problem.
+The new version (since version 0.2) is using GPIO 17 (TX) and GPIO 16 (RX) to avoid the problem.
 
 The M5Stack can also work as WiFi Gateway to send NMEA 0183 messsages (TCP port 2222) via WiFi.
 Just set ENABLE_WIFI to "1" to enable. Change SSID/password accordingly.
