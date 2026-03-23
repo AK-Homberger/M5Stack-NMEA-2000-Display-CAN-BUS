@@ -3,7 +3,7 @@
   Reads Data from CAN bus and displays is on the M5Stack module
   Converts NMEA2000 to NMEA0183 and send it to TCP clients via WiFi (port 2222)
 
-  Version 0.3 / 02.03.2021
+  Version 0.4 / 23.03.2026
 */
 
 #define ENABLE_WIFI 0  // Set to 1 to enable M5Stack acts also as NMEA0183 WiFi Gateway. Set to 0 to disable.
