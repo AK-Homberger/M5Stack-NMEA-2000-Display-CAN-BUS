@@ -10,6 +10,8 @@ The M5Stack has only a limited number of GPIO pins available. The initial versio
 
 The new version (since version 0.2) is using GPIO 17 (TX) and GPIO 16 (RX) to avoid the problem.
 
+Important: The 0.4 version compiles with the newer M5Unify and GFX libraries. Pleas use current board software and libraries.
+
 The M5Stack can also work as WiFi Gateway to send NMEA 0183 messsages (TCP port 2222) via WiFi.
 Just set ENABLE_WIFI to "1" to enable. Change SSID/password accordingly.
 
@@ -34,6 +36,7 @@ A knife tip is suitable for removing the SMD resistor. Use it to scratch or pry 
 It then looks like the picture. Then measure to be on the safe side. Without a 120 ohm resistor, the multimeter shows approx. 75 kOhm.
 
 ## Updates:
+- 23.03.2026 - Version 0.4: Updated code to compile with newer M5Unify and GFX libraries.
 - 02.03.2021 - Version 0.3: Added changed source address check.
 - 01.03.2021 - Version 0.2: Changed CAN bus GPIOs.
 - 23:11.2019 - Version 0.1: Initial version.
