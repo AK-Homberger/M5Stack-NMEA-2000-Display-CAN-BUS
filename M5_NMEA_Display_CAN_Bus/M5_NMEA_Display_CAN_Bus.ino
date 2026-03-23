@@ -19,8 +19,9 @@
 #include <Seasmart.h>
 #include <N2kMessages.h>
 #include <WiFi.h>
-#include <M5Stack.h>
+#include <M5Unified.h>
 #include <Preferences.h>
+#include <esp_mac.h>
 
 #include "N2kDataToNMEA0183.h"
 #include "List.h"
@@ -99,8 +100,8 @@ void setup() {
   M5.Lcd.setTextColor(TFT_YELLOW, TFT_BLACK);
   M5.Lcd.setCursor(0, 0, 1);
 
-  ledcDetachPin(SPEAKER_PIN);
-  pinMode(SPEAKER_PIN, INPUT);
+  //ledcDetachPin(SPEAKER_PIN);
+  //pinMode(SPEAKER_PIN, INPUT);
 
   Serial.begin(115200); delay(500);
 
@@ -126,8 +127,8 @@ void setup() {
 
   NMEA2000.SetN2kCANMsgBufSize(8);
   NMEA2000.SetN2kCANReceiveFrameBufSize(250);
-
   esp_efuse_mac_get_default(chipid);
+  //esp_efuse_mac_get_default(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
 
   // Set product information
