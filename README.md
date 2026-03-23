@@ -38,7 +38,7 @@ A knife tip is suitable for removing the SMD resistor. Use it to scratch or pry 
 It then looks like the picture. Then measure to be on the safe side. Without a 120 ohm resistor, the multimeter shows approx. 75 kOhm.
 
 ## Updates:
-- 23.03.2026 - Version 0.4: Updated code to compile with newer M5Unify and GFX libraries.
+- 23.03.2026 - Version 0.4: Updated code to compile with newer M5Unified and M5GFX libraries.
 - 02.03.2021 - Version 0.3: Added changed source address check.
 - 01.03.2021 - Version 0.2: Changed CAN bus GPIOs.
 - 23:11.2019 - Version 0.1: Initial version.
