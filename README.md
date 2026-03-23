@@ -11,6 +11,8 @@ The M5Stack has only a limited number of GPIO pins available. The initial versio
 The new version (since version 0.2) is using GPIO 17 (TX) and GPIO 16 (RX) to avoid the problem.
 
 Important: The 0.4 version compiles with the newer M5Unify and GFX libraries. Pleas use current board software and libraries.
+- Board URL: https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_index.json (Board: M5Stack version 3.26)
+- https://github.com/m5stack/M5Unified
 
 The M5Stack can also work as WiFi Gateway to send NMEA 0183 messsages (TCP port 2222) via WiFi.
 Just set ENABLE_WIFI to "1" to enable. Change SSID/password accordingly.
